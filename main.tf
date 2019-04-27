@@ -17,6 +17,7 @@ resource "google_redis_instance" "cache" {
 #  location_id             = "us-central1-a"
   location_id             = "${var.gcp_zone}"
   alternative_location_id = "${var.alternative_gcp_zone}"
+  project       = "${var.gcp_project_id}"
 
   authorized_network = "${google_compute_network.auto-network.self_link}"
 
