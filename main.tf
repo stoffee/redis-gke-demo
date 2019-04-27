@@ -15,8 +15,8 @@ resource "google_redis_instance" "cache" {
   memory_size_gb = 1
 
 #  location_id             = "us-central1-a"
-  location_id             = "${var.location_id}"
-  alternative_location_id = "${var.alternative_location_id}"
+  location_id             = "${var.gcp_zone}"
+  alternative_location_id = "${var.alternative_gcp_zone}"
 
   authorized_network = "${google_compute_network.auto-network.self_link}"
 

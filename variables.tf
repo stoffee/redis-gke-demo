@@ -10,11 +10,11 @@ variable "gcp_region" {
   description = "The region in which all GCP resources will be launched."
 }
 
-variable "location_id" {
+variable "gcp_zone" {
   description = "The location in which all GCP resources will be launched."
 }
 
-variable "alternative_location_id" {
+variable "alternative_gcp_zone" {
   description = "The alternative location in which all GCP resources will be launched."
 }
 
