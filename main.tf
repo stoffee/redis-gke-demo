@@ -24,10 +24,10 @@ resource "google_redis_instance" "cache" {
   display_name      = "${var.namespace}"
 #  reserved_ip_range = "192.168.0.0/29"
 
-  labels = {
-    Owner   = "cdunlap"
-    TTL     = "24hrs"
-  }
+#  labels = {
+#    Owner   = "cdunlap"
+#    TTL     = "24hrs"
+#  }
 }
 
 resource "google_compute_network" "auto-network" {
