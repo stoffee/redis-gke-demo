@@ -17,7 +17,7 @@ resource "google_redis_instance" "cache" {
   location_id             = "${var.gcp_zone}"
   alternative_location_id = "${var.alternative_gcp_zone}"
 
-  authorized_network = "${google_compute_network.auto-network.self_link}"
+  #authorized_network = "${google_compute_network.auto-network.self_link}"
 
   redis_version     = "REDIS_3_2"
   display_name      = "${var.namespace}"
@@ -31,6 +31,6 @@ resource "google_redis_instance" "cache" {
 
 resource "google_compute_network" "auto-network" {
   name = "authorized-network"
-  project       = "${var.gcp_project_id}"
-  auto_create_subnetwork = "True"
+  #project       = "${var.gcp_project_id}"
+  #auto_create_subnetwork = "True"
 }
