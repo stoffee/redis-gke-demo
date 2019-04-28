@@ -29,6 +29,7 @@ resource "google_container_cluster" "primary" {
 resource "google_container_node_pool" "primary_preemptible_nodes" {
   name       = "${var.namespace}-node-pool"
   location = "${var.gcp_region}"
+  project = "${var.gcp_project_id}"
   cluster    = "${google_container_cluster.primary.name}"
   node_count = 3
 
