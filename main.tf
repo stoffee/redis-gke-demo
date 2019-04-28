@@ -22,7 +22,6 @@ resource "google_redis_instance" "cache" {
   redis_version     = "REDIS_3_2"
   display_name      = "${var.namespace}"
 #  reserved_ip_range = "192.168.0.0/29"
-  auto_create_subnetwork = "True"
 
   labels = {
     Owner   = "cdunlap"
@@ -33,4 +32,5 @@ resource "google_redis_instance" "cache" {
 resource "google_compute_network" "auto-network" {
   name = "authorized-network"
   project       = "${var.gcp_project_id}"
+  auto_create_subnetwork = "True"
 }
