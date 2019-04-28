@@ -11,6 +11,7 @@ terraform {
 resource "google_container_cluster" "primary" {
   name     = "${var.namespace}-gke-cluster"
   location = "${var.gcp_region}"
+  project = "${var.gcp_project_id}"
 
   # We can't create a cluster with no node pool defined, but we want to only use
   # separately managed node pools. So we create the smallest possible default
