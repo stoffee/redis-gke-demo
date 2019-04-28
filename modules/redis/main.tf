@@ -1,11 +1,11 @@
-provider "google" {
-  region      = "${var.gcp_region}"
-  credentials = "${var.gcp_credentials}"
-}
+#provider "google" {
+#  region      = "${var.gcp_region}"
+#  credentials = "${var.gcp_credentials}"
+#}
 
-terraform {
-  required_version = ">= 0.11.0"
-}
+#terraform {
+#  required_version = ">= 0.11.0"
+#}
 
 
 
