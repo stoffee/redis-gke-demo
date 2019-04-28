@@ -31,6 +31,6 @@ resource "google_redis_instance" "cache" {
 
 resource "google_compute_network" "auto-network" {
   name = "authorized-network"
-  #project       = "${var.gcp_project_id}"
+  project       = "${var.gcp_project_id}"
   #auto_create_subnetwork = "True"
 }
