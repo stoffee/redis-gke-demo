@@ -11,6 +11,7 @@ terraform {
 
 resource "google_redis_instance" "cache" {
   name           = "${var.namespace}-cache"
+  project       = "${var.gcp_project_id}"
   tier           = "STANDARD_HA"
   memory_size_gb = 1
 
@@ -31,6 +32,6 @@ resource "google_redis_instance" "cache" {
 
 resource "google_compute_network" "auto-network" {
   name = "authorized-network"
-  project       = "${var.gcp_project_id}"
   #auto_create_subnetwork = "True"
+  project       = "${var.gcp_project_id}"
 }
